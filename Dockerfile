@@ -36,7 +36,7 @@ COPY ./laravel-project /var/www/
 WORKDIR /var/www/
 
 RUN composer install \
-&& php artisan key:generate \
 && cp -n .env.example .env \
+&& php artisan key:generate \
 && chmod 777 -R storage/ \
 && chmod 777 -R bootstrap/
